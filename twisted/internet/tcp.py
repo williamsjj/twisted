@@ -862,7 +862,7 @@ class Port(base.BasePort, _SocketCloser):
 
         log.msg(eventSource=self,
                 eventType="start",
-                protocol=self.protocol,
+                protocol=self.factory,
                 portNumber=self._realPortNumber)
 
         # The order of the next 6 lines is kind of bizarre.  If no one
@@ -980,7 +980,7 @@ class Port(base.BasePort, _SocketCloser):
         """
         log.msg(eventSource=self,
                 eventType="stop",
-                protocol=self.protocol,
+                protocol=self.factory,
                 portNumber=self._realPortNumber)
 
 
